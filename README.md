@@ -1,3 +1,3 @@
 # pictionarx
 
-This is the commit
+This is the commit from dominiks computer
