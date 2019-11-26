@@ -1,16 +1,14 @@
 const toggleRecordingButton = document.getElementById('main-button');
 
-isRecordingEnabled = false;
+let isRecordingEnabled = false;
 
-const audioChunks = [];
-
-const clearAudio = (audioChunks) => {
+const clearAudio = audioChunks => {
     while(audioChunks.length > 0) {
         audioChunks.pop();
     };
 };
 
-const toggleRecording = (mediaRecorder) => {
+const toggleRecording = mediaRecorder => {
     isRecordingEnabled = !isRecordingEnabled;
 
     if (isRecordingEnabled) {
@@ -23,8 +21,10 @@ const toggleRecording = (mediaRecorder) => {
 };
 
 navigator.mediaDevices.getUserMedia({audio : true})
-    .then( stream => {
+    .then(stream => {
         const mediaRecorder = new MediaRecorder(stream);
+
+        const audioChunks = [];
 
         mediaRecorder.addEventListener("dataavailable", e => {
             audioChunks.push(e.data);
@@ -42,7 +42,7 @@ navigator.mediaDevices.getUserMedia({audio : true})
 
         toggleRecordingButton.addEventListener('click', () => toggleRecording(mediaRecorder));
     })
-    .catch ( err => {
+    .catch (err => {
         console.log(err);
         alert("Recording is not possible without recording permissions.");
     });
