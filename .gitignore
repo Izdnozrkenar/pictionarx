@@ -116,7 +116,7 @@ sftp-config.json
 **.history
 
 # dependencies
-/frontend/pictonarx_ui/node_modules
+/frontend
 **/.pnp
 **.pnp.js
 
