@@ -1,0 +1,22 @@
+.recordButton {
+    background: white;
+    padding: 25px;
+    margin-top: 28vh;
+    border: none;
+    border-radius: 50%;
+    font-family: 'Amatic SC'; 
+    font-size: 2rem;
+    font-weight: 700;
+
+    transition: transform 0.1s ease-out;
+}
+
+.recordButton:hover {
+    transform: scale(1.15);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
