@@ -116,7 +116,7 @@ sftp-config.json
 **.history
 
 # dependencies
-**/node_modules
+**/node_modules/
 **.pnp
 **.pnp.js
 
