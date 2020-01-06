@@ -1,14 +1,4 @@
-body {
-    background-color: pink;
-}
-
-h1 {
-    color: white;
-    font-size: 2.5rem;
-    font-family: 'Amatic SC', cursive;
-}
-
-button {
+.recordButton {
     background: white;
     padding: 25px;
     margin-top: 28vh;
@@ -21,7 +11,7 @@ button {
     transition: transform 0.1s ease-out;
 }
 
-button:hover {
+.recordButton:hover {
     transform: scale(1.15);
 }
 
